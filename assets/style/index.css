@@ -16,6 +16,9 @@ body {
   margin-inline: auto;
 }
 
+main {
+  height: 100svh;
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Component                                            */
