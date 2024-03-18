@@ -75,6 +75,7 @@ p {
   padding: 1.5rem;
   color: var(--text-color);
   font-weight: 500;
+  border-radius: 5px;
 }
 
 .guesses-remaining-wrapper p {
