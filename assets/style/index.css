@@ -3,12 +3,18 @@
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 :root {
-  --app-background-dark: rgb(24, 23, 32);
+  --background-color: #ff00ff;
+  --text-color: #fff;
 }
 
 body {
-  background-color: var(--app-background-dark);
+  background-color: var(--background-color);
   font-family: 'Noto Sans', 'Open Sans', arial, sans-serif;
+}
+
+.center {
+  display: grid;
+  place-items: center;
 }
 
 .container {
@@ -23,3 +29,55 @@ main {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Component                                            */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.restart-button {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  color: var(--background-color);
+  background-color: var(--text-color);
+  padding: .6rem 1.4rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+p {
+  color: var(--text-color);
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.guess-input-wrapper input {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  padding: 3rem;
+  text-align: center;
+  font-size: 10rem;
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+.guess-input-wrapper input::placeholder {
+  color: rgba(255, 0, 255, 0.5);
+}
+
+.hint-generator {
+  background-color: #9a009a;
+  height: 7.5rem;
+  width: 25rem;
+  padding: 1.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.guesses-remaining-wrapper p {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
