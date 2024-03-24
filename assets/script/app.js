@@ -54,11 +54,10 @@ function handleGuess() {
 /*  Restart Game                                         */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 function restartGame() {
+  randomNumber = generateRandomNumber();
   guesses = 5;
   guessesRemaining.innerHTML = guesses;
-
   guessInput.value = '';
-
   guessInput.disabled = false;
   hintGenerator.innerHTML = 'Guess the number between 1 and 50';
 }
