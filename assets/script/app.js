@@ -28,6 +28,7 @@ function handleGuess() {
   if (inputValue >= 1 && inputValue <= 50 && !isNaN(inputValue)) {
     if (inputValue === randomNumber) {
       hintGenerator.innerHTML = 'Well done! You guessed the right number!';
+      guessInput.disabled = true;
     } else if (inputValue > randomNumber) {
       hintGenerator.innerHTML = 'My number is lower.';
       guesses--;
@@ -37,11 +38,17 @@ function handleGuess() {
       guesses--;
       guessesRemaining.innerHTML = guesses;
     }
+    if (guesses === 0) {
+      hintGenerator.innerHTML = `No guesses remaining. My number was ${randomNumber}`;
+      guessInput.disabled = true;
+    }
   }
   else {
     hintGenerator.innerHTML = 'Please enter a valid number between 1 and 50';
   }
 }
+
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Restart Game                                         */
