@@ -53,9 +53,15 @@ function handleGuess() {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Restart Game                                         */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/* function restartGame() {
+function restartGame() {
+  guesses = 5;
+  guessesRemaining.innerHTML = guesses;
 
-} */
+  guessInput.value = '';
+
+  guessInput.disabled = false;
+  hintGenerator.innerHTML = 'Guess the number between 1 and 50';
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Event Listeners                                       */
@@ -67,6 +73,8 @@ utils.listen('keydown', guessInput, event => {
     guessInput.value = '';
   }
 });
+
+utils.listen('click', restartButton, restartGame);
 
 
 
