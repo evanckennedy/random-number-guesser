@@ -39,7 +39,7 @@ function handleGuess() {
       guessesRemaining.innerHTML = guesses;
     }
     if (guesses === 0) {
-      hintGenerator.innerHTML = `No guesses remaining. My number was ${randomNumber}`;
+      hintGenerator.innerHTML = `No guesses remaining. My number was ${randomNumber}.`;
       guessInput.disabled = true;
     }
   }
